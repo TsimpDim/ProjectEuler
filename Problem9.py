@@ -5,9 +5,6 @@ def factors(value):
             factors.append((i, int(value / i)))
     return factors
 
-def triple_sum(x,y,z):
-    return x+y+z
-
 
 i = 1
 triples = []
@@ -21,9 +18,9 @@ while summ != 1000:
         z = i + pair[0] + pair[1]
 
         triples.append([x,y,z])
-        if triple_sum(*[x,y,z]) == 1000: break
+        if x+y+z == 1000: break
     
-    summ = triple_sum(*[x,y,z])
+    summ = x+y+z
     i += 1
 print(x*y*z)       
 print(triples)
