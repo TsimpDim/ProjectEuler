@@ -15,15 +15,22 @@ for i in range(0,19):
         ver.append(X[j : j+61 : 20])
                 
 #Diagonal left -> right
-diag_1 = []
+diag_1_u = []
 
     #Upper half
 for i in range(60,400,20):
     quads = 0
-    j = 0 #Times stayed in the same diagonal
-
     while(quads <  i//20 - 2):
         if(i - 19 > 0):
-            diag_1.append(X[i + quads*(-19) : i+(3+quads)*(-19) -1 : -19])
+            diag_1_u.append(X[i + quads*(-19) : i+(3+quads)*(-19) -1 : -19])
+            quads+=1
+
+    #Lower half
+diag_1_l = []
+for i in range(39,400,20):
+    quads = 0
+    while(quads < 17 - i//20):
+        if(i <= 340):
+            diag_1_l.append(X[i + quads*(19) : i+(3+quads)*(19) + 1: 19])
             quads+=1
 
