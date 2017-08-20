@@ -1,4 +1,4 @@
-#I can't really say that I solve this, algorithm from : http://www.mathblog.dk/project-euler-18/
+#I can't really say that I solved this, algorithm from : http://www.mathblog.dk/project-euler-18/
 
 M=[
  [75],
