@@ -5,22 +5,20 @@ def AlphValue(name):
     sum = 0
     name = name.lower()
     for letter in name:
-        sum+= letters.index(letter) + 1
+        sum += letters.index(letter) + 1
 
     return sum
 
 
-def MergeSort(mainlist):
-    
-
 
 def main():
-
     with open('p022_names.txt') as csvfile:
-        reader = MergeSort(list(csv.reader(csvfile,delimiter =',')))
+        names = list(csv.reader(csvfile,delimiter =','))
+        names = sorted(names[0],key=str.lower)
         res = 0
-        for i in range(1,len(reader[0])):
-            res += i*AlphValue(reader[0][i-1])
+        for i in range(0,len(names)):
+            res += (i+1)*AlphValue(names[i])
+    
 
     print(res)
 
